@@ -14,6 +14,8 @@
 		B13EE3BC1B252A29001FB32D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13EE3BB1B252A29001FB32D /* Images.xcassets */; };
 		B13EE3BF1B252A29001FB32D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13EE3BD1B252A29001FB32D /* LaunchScreen.xib */; };
 		B13EE3CB1B252A29001FB32D /* test4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B13EE3CA1B252A29001FB32D /* test4Tests.m */; };
+		B1A849021B2A0EC600ED5AA7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A849001B2A0EC600ED5AA7 /* SettingsViewController.m */; };
+		B1A849031B2A0EC600ED5AA7 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A849011B2A0EC600ED5AA7 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		B13EE3C41B252A29001FB32D /* test4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13EE3C91B252A29001FB32D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B13EE3CA1B252A29001FB32D /* test4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test4Tests.m; sourceTree = "<group>"; };
+		B1A848FF1B2A0EC600ED5AA7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B1A849001B2A0EC600ED5AA7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B1A849011B2A0EC600ED5AA7 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,9 @@
 		B13EE3A21B252A29001FB32D = {
 			isa = PBXGroup;
 			children = (
+				B1A848FF1B2A0EC600ED5AA7 /* SettingsViewController.h */,
+				B1A849001B2A0EC600ED5AA7 /* SettingsViewController.m */,
+				B1A849011B2A0EC600ED5AA7 /* SettingsViewController.xib */,
 				B13EE3AD1B252A29001FB32D /* test4 */,
 				B13EE3C71B252A29001FB32D /* test4Tests */,
 				B13EE3AC1B252A29001FB32D /* Products */,
@@ -168,6 +176,7 @@
 				TargetAttributes = {
 					B13EE3AA1B252A29001FB32D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2ARNJY38FW;
 					};
 					B13EE3C31B252A29001FB32D = {
 						CreatedOnToolsVersion = 6.2;
@@ -202,6 +211,7 @@
 				B13EE3BA1B252A29001FB32D /* Main.storyboard in Resources */,
 				B13EE3BF1B252A29001FB32D /* LaunchScreen.xib in Resources */,
 				B13EE3BC1B252A29001FB32D /* Images.xcassets in Resources */,
+				B1A849031B2A0EC600ED5AA7 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +232,7 @@
 				B13EE3B71B252A29001FB32D /* ViewController.m in Sources */,
 				B13EE3B41B252A29001FB32D /* AppDelegate.m in Sources */,
 				B13EE3B11B252A29001FB32D /* main.m in Sources */,
+				B1A849021B2A0EC600ED5AA7 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +354,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = test4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,7 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = test4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +429,7 @@
 				B13EE3D01B252A29001FB32D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B13EE3D11B252A29001FB32D /* Build configuration list for PBXNativeTarget "test4Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +438,7 @@
 				B13EE3D31B252A29001FB32D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

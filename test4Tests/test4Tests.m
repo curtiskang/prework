@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "ViewController.h"
 
 @interface test4Tests : XCTestCase
+
+@property (strong, nonatomic) ViewController *vc;
 
 @end
 
@@ -18,6 +21,11 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    UIStoryboard *storyboard = [ UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    self.vc = [storyboard instantiateInitialViewController];
+   
+    [self.vc performSelectorOnMainThread:@selector(loadView) withObject:nil waitUntilDone:YES];
+    
 }
 
 - (void)tearDown {
@@ -35,6 +43,15 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testDisplayTotalAmountFor123
+{
+    [self.vc displayTotalAmount:123];
+    NSString *result = self.vc.billAmount.text;
+    XCTAssertEqualObjects(result, @"$123.00");
+    
+    
 }
 
 @end
