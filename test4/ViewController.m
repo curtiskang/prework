@@ -23,7 +23,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@"hello" forKey:@"user_data1"];
-    [defaults setInteger:0 forKey:@"user_data2"];
+    [defaults setInteger:5 forKey:@"user_data2"];
     [defaults synchronize];
     [defaults integerForKey:@"user_data2"];
    
@@ -123,26 +123,48 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     NSLog(@"view will appear");
+     [self changePercentage];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     NSLog(@"view did appear");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSInteger *defaultAmount= [defaults integerForKey:@"user_data2"];
-    NSString *strFromInt = [NSString stringWithFormat:@"%d", defaultAmount];
+    NSInteger defaultPercent= [defaults integerForKey:@"user_data2"];
     
-    self.billAmount.text =strFromInt;
+    NSInteger per1 = defaultPercent;
+    NSInteger per2 = defaultPercent*2;
+    NSInteger per3 = defaultPercent*3;
+    NSInteger per4 = defaultPercent*4;
+    NSInteger per5 = defaultPercent*5;
+    
+    NSString *strFromInt1 = [NSString stringWithFormat:@"%d", per1];
+    NSString *strFromInt2 = [NSString stringWithFormat:@"%d", per2];
+    NSString *strFromInt3 = [NSString stringWithFormat:@"%d", per3];
+    NSString *strFromInt4 = [NSString stringWithFormat:@"%d", per4];
+    NSString *strFromInt5 = [NSString stringWithFormat:@"%d", per5];
+    
+    //self.billAmount.text =strFromInt;
+    [self.tipPercent setTitle:[strFromInt1 stringByAppendingString:@"%"] forSegmentAtIndex:0];
+     [self.tipPercent setTitle:[strFromInt2 stringByAppendingString:@"%"] forSegmentAtIndex:1];
+     [self.tipPercent setTitle:[strFromInt3 stringByAppendingString:@"%"] forSegmentAtIndex:2];
+     [self.tipPercent setTitle:[strFromInt4 stringByAppendingString:@"%"] forSegmentAtIndex:3];
+     [self.tipPercent setTitle:[strFromInt5 stringByAppendingString:@"%"] forSegmentAtIndex:4];
 
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     NSLog(@"view will disappear");
+   
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     NSLog(@"view did disappear");
 }
-
+- (void)changePercentage {
+    NSLog(@" change percentage");
+   
+    
+}
 
 
 @end

@@ -31,6 +31,7 @@
 - (void)updateDisplayedTip;
 - (void)updateDisplayedTotal;
 - (void)onSettingsButton;
+- (void)changePercentage;
 
 @end
 
